@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="music_palyer">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="assets/468-thumbnail.png" alt="thumbnail" class="song_image">
+            <h2>Despacito</h2>
+            <p>Luis Fonsi Ft Puerto Rican</p>
+
+            <audio id="song">
+                <source src="assets/Awara - Salman Ali Song _ Slowed And Reverb Lofi Mix.mp3" type="audio/mpeg">
+            </audio>
+
+            <p id="duration"></p>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5">
+
+            <input type="range" value="0" id="progress">
+
+            <div class="controls">
+                <div >
+                     <i class="fa-solid fa-backward"></i>
+                </div>
+                <div onclick="playPause()">
+                     <i class="fa-solid fa-play" id="ctrl_icon"></i>
+                </div>
+                <div >
+                    <i class="fa-solid fa-forward"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
